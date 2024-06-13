@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Restaurantes.Application\Restaurantes.Application.csproj" />
+    <ProjectReference Include="..\Restaurantes.Domain\Restaurantes.Domain.csproj" />
+    <ProjectReference Include="..\Restaurantes.Infrastructure\Restaurantes.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="IoC\" />
+  </ItemGroup>
+
 </Project>

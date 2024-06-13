@@ -1,0 +1,28 @@
+version: '3.8'
+
+services:
+  api:
+    image: restaurantes-api
+    build:
+      context: .
+      dockerfile: Restaurantes.API/Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Numsey#2024"
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Express"
+    ports:
+      - "1433:1433"
+    volumes:
+      - db_data:/var/opt/mssql
+
+volumes:
+  db_data:
