@@ -14,6 +14,11 @@ namespace Restaurantes.Domain.Entities
         public bool IsBlocked { get;  private set; }
         public IEnumerable<Avaliacao> Avaliacaos { get; private set; }
 
+        public Restaurante()
+        {
+            
+        }
+
         public Restaurante(string nome, string endereco, decimal precoMedio)
         {
             Nome = nome;
