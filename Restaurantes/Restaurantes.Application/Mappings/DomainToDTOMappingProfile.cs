@@ -9,6 +9,7 @@ namespace Restaurantes.Application.Mappings
         public DomainToDTOMappingProfile() 
         { 
             CreateMap<Usuario, UsuarioDTO>().ReverseMap();
+            CreateMap<Restaurante, RestauranteDTO>().ReverseMap();
         }
     }
 }
