@@ -13,7 +13,7 @@ namespace Restaurantes.Application.DTOs
         public string Nome { get; set; }
 
         [MaxLength(300)]
-        public string Endereco { get; set; }
+        public string EnderecoRestaurante { get; set; }
 
         public decimal PrecoMedio { get; set; }
         public double AvaliacaoMedia { get; set; }
